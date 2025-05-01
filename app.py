@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Configuration
-MANAGEMENT_EMAIL = "kariakistephen809@gmail.com"
+MANAGEMENT_EMAIL = os.getenv('EMAIL_USERNAME')
 GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
 
 # Email config
