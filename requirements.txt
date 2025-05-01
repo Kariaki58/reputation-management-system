@@ -5,7 +5,6 @@ annotated-types==0.7.0
 anyio==4.9.0
 appdirs==1.4.4
 APScheduler==3.11.0
-apturl==0.5.2
 asttokens==3.0.0
 async-timeout==5.0.1
 attrs==25.3.0
