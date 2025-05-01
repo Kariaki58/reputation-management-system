@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function redirectToGoogleReviews() {
         // In production, replace with your actual Google Review URL
-        const googleReviewUrl = "https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID";
+        const googleReviewUrl = "https://www.google.com/search?q=skincare+in+lagos&oq=skincare+in+lagos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMgYIAhAjGCcyDAgDEAAYFBiHAhiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDI3ODFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&lqi=ChFza2luY2FyZSBpbiBsYWdvc1oTIhFza2luY2FyZSBpbiBsYWdvc5IBGmJlYXV0eV9wcm9kdWN0c193aG9sZXNhbGVyqgFkCg0vZy8xMXZrejIyOTl0CgsvZy8xMjJfZ2YxehABKgwiCHNraW5jYXJlKAAyHxABIhsLgOjaU8l9EsuItb10k9u88G-zsb5hCh0ScvUyFRACIhFza2luY2FyZSBpbiBsYWdvcw#rlimm=4827505469685586878&lrd=0x103bf4ff0cc43d99:0x42febea5bfdd5bbe,3,,,,";
         
         // Show temporary message before redirect
         ratingScreen.classList.add('hidden');
