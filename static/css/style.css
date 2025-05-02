@@ -184,3 +184,22 @@ body {
 .logo-circle {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+.hidden {
+    display: none !important;
+}
+
+#submit-feedback-btn {
+    position: relative;
+}
+
+#loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fa-spinner {
+    margin-right: 8px;
+}

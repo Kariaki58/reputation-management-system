@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const stars = document.querySelectorAll('.rating-stars i');
     const continueBtn = document.getElementById('continue-btn');
     const feedbackForm = document.getElementById('detailedFeedbackForm');
+    const submitBtn = document.getElementById('submit-feedback-btn');
+    const submitText = document.getElementById('submit-text');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
     let selectedRating = 0;
 
@@ -111,6 +114,45 @@ document.addEventListener('DOMContentLoaded', function() {
         followupMessage.textContent = message;
         thankYouMessage.classList.remove('hidden');
     }
+
+    
+    
+    feedbackForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitText.classList.add('hidden');
+        loadingSpinner.classList.remove('hidden');
+        submitBtn.disabled = true;
+        
+        // Disable all form inputs
+        const inputs = feedbackForm.querySelectorAll('input, textarea, button');
+        inputs.forEach(input => {
+            input.disabled = true;
+        });
+        
+        // Simulate form submission (replace with actual AJAX call)
+        setTimeout(() => {
+            // Hide loading state
+            submitText.classList.remove('hidden');
+            loadingSpinner.classList.add('hidden');
+            submitBtn.disabled = false;
+            
+            // Show thank you message
+            document.getElementById('lowRatingForm').classList.add('hidden');
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+            document.getElementById('followupMessage').textContent = "We appreciate your feedback and will use it to improve our service.";
+            
+            // Re-enable form inputs (in case user wants to submit another review)
+            inputs.forEach(input => {
+                input.disabled = false;
+            });
+            
+            // Reset form
+            feedbackForm.reset();
+        }, 2000); // Simulate 2 second delay for submission
+    });
+    
 });
 
 // Add at the bottom of your existing code
@@ -126,6 +168,7 @@ document.getElementById('new-review').addEventListener('click', function() {
     resetForm();
 });
 
+
 function resetForm() {
     // Reset stars
     selectedRating = 0;
@@ -137,3 +180,4 @@ function resetForm() {
         feedbackForm.reset();
     }
 }
+

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Feedback</title>
+    <!-- Favicon -->
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -44,8 +47,10 @@
                     <label for="feedback">What could we do better?</label>
                     <textarea id="feedback" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Submit Feedback</button>
-                <!-- In lowRatingForm div -->
+                <button type="submit" class="submit-btn" id="submit-feedback-btn">
+                    <span id="submit-text">Submit Feedback</span>
+                    <span id="loading-spinner" class="hidden"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+                </button>
                 <button id="back-to-rating" class="back-btn">← Back to Rating</button>
             </form>
         </div>
@@ -54,7 +59,6 @@
         <div class="thank-you-message hidden" id="thankYouMessage">
             <h2>Thank You!</h2>
             <p id="followupMessage"></p>
-            <!-- In thankYouMessage div -->
             <button id="new-review" class="back-btn">Leave Another Review</button>
         </div>
     </div>
