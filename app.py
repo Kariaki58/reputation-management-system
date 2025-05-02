@@ -65,7 +65,7 @@ def send_management_email(name, email, rating, feedback):
             server.starttls()
             server.login(EMAIL_USERNAME, EMAIL_PASSWORD)
             server.send_message(msg)
-            z
+            
     except Exception as e:
         print(f"Email error: {str(e)}")
         raise
